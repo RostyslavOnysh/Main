@@ -1,0 +1,39 @@
+на приклад : 
+public class CompareStrings {
+  public static boolean compareStrings(String firstString, String secondString) {
+   if(firstString == null && secondString == null){
+            return true;
+        }
+        if(firstString != null && firstString.equals(secondString)){
+            return true;
+        }else {
+            return false;
+        }
+    }
+}
+ 
+ 
+ Щоб викликати метод compareStrings у вашому main методі, 
+ вам потрібно створити екземпляр класу CompareStrings та викликати метод на цьому екземплярі. 
+ Ось як це можна зробити:
+ 
+ public class Main {
+  public static void main(String[] args) {
+    String firstString = "Hello";
+    String secondString = "Hello";
+    
+    CompareStrings comparer = new CompareStrings();
+    boolean result = comparer.compareStrings(firstString, secondString);
+    
+    System.out.println(result); // повинно вивести true
+  }
+}
+В цьому прикладі ми створюємо дві рядки firstString та secondString,
+потім створюємо новий екземпляр класу CompareStrings, викликаємо метод compareStrings на цьому екземплярі, 
+передаючи йому firstString та secondString як параметри, та зберігаємо результат у змінну result.
+Нарешті,ми виводимо результат у консоль за допомогою методу println.
+
+
+
+
+
