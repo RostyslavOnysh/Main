@@ -1,0 +1,23 @@
+public int matchResult(int result1, int result2, int bet1, int bet2) {
+    return result1 == bet1 && result2 == bet2 ? 2 :
+           (result1 > result2 && bet1 > bet2 || result1 < result2 && bet1 < bet2 || result1 == result2 && bet1 == bet2) ? 1 : 0;
+}
+
+
+This code is using two nested ternary operators to determine the outcome of the user's bet based on the match result and the user's prediction.
+
+The first ternary operator checks if the user's prediction is a perfect match with the match result.
+If the condition result1 == bet1 && result2 == bet2 is true, t
+hen the result of the bet is 2, meaning the user's prediction was 100% accurate.
+If this condition is false, the code moves on to the second ternary operator.
+
+The second ternary operator checks for two different conditions. First,
+it checks if the user's prediction correctly guessed the winner, loser or draw. 
+This is done by checking if result1 > result2 && bet1 > bet2 or result1 < result2 && bet1 < bet2 or result1 == result2 && bet1 == bet2.
+If any of these conditions are true, the result of the bet is 1, meaning the user guessed the outcome of the match correctly, 
+even if their prediction was not an exact match.
+
+Finally, if both of the ternary operators evaluate to false, then the result of the bet is 0, meaning the user's prediction was completely wrong.
+
+So in summary, this code is using the ternary operator to check the match result and the user's prediction, 
+and determine whether the user's bet was correct, partially correct, or completely wrong based on those conditions.
