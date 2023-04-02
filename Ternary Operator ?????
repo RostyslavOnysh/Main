@@ -21,3 +21,23 @@ Finally, if both of the ternary operators evaluate to false, then the result of 
 
 So in summary, this code is using the ternary operator to check the match result and the user's prediction, 
 and determine whether the user's bet was correct, partially correct, or completely wrong based on those conditions.
+
+
+The ternary operator is a shorthand way of writing an if-else statement in Java.
+It is a single line of code that evaluates a condition and returns one value if the condition is true and another value if it is false.
+The ternary operator can be faster than an if-else block1. However, it can be less readable than an if-else block when used improperly2.
+
+The ternary operator emphasizes what’s to be done over the selection of the values to do it with,
+while an if-else statement emphasizes the branching first and what’s to be done is secondary2.
+In different situations, either may better reflect the programmer’s “natural” perspective on the code and make it easier to understand, verify and maintain2.
+
+In terms of optimization and speed, ternary operators are faster than if-else blocks3.
+
+
+Тернарний оператор - це скорочений спосіб написання умовного оператора в Java. Це один рядок коду, який оцінює умову і повертає одне значення,
+якщо умова є істинною, і інше значення, якщо вона є хибною. Тернарний оператор може бути швидшим за блок if-else1. 
+Однак він може бути менш зрозумілим за блок if-else при неправильному використанні2.
+Тернарний оператор підкреслює те, що потрібно зробити над вибором значень для його виконання,
+тоді як оператор if-else підкреслює розгалуження першим і те, що потрібно зробити - другорядне2. 
+В різних ситуаціях будь-який з них може краще відображати “природну” перспективу програміста на код і полегшити його розуміння, перевірку та підтримку2.
+З точки зору оптимізації та швидкості тернарні оператори швидші за блоки if-else3.
