@@ -7,20 +7,15 @@ In Java, it is possible to inherit attributes and methods from one class to anot
 To inherit from a class, use the extends keyword.
 
 In the example below, the Car class (subclass) inherits the attributes and methods from the Vehicle class (superclass):
-
----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-                                                  ExampleGet your own Java Server
----------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                   
-
+```java
 class Vehicle {
   protected String brand = "Ford";        // Vehicle attribute
   public void honk() {                    // Vehicle method
     System.out.println("Tuut, tuut!");
   }
 }
-
+```
+```java
 class Car extends Vehicle {
   private String modelName = "Mustang";    // Car attribute
   public static void main(String[] args) {
@@ -35,13 +30,11 @@ class Car extends Vehicle {
     System.out.println(myCar.brand + " " + myCar.modelName);
   }
 }
-
----------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                        The final Keyword
----------------------------------------------------------------------------------------------------------------------------------------------------------                                                        
+```
+The final Keyword                                               
 If you don't want other classes to inherit from a class, use the final keyword:
 If you try to access a final class, Java will generate an error:
-
+```java
 final class Vehicle {
   ...
 }
@@ -49,12 +42,12 @@ final class Vehicle {
 class Car extends Vehicle {
   ...
 }
----------------------------------------------------------------------------------------------------------------------------------------------------------
+```
 
-The output will be something like this:
-
+*The output will be something like this:*
+```java
 Main.java:9: error: cannot inherit from final Vehicle
 class Main extends Vehicle {
                   ^
 1 error)
----------------------------------------------------------------------------------------------------------------------------------------------------------
+```
