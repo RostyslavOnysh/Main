@@ -63,9 +63,6 @@ public class ExcepTest {
 }
 ```
 This will produce the following result −
-
-Output
+*Output*
 Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3
 Out of the block
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
