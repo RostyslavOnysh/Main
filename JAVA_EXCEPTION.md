@@ -34,8 +34,8 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5
                                              
 All exception classes are subtypes of the java.lang.Exception class. The exception class is a subclass of the Throwable class. Other than the exception class there is another subclass called Error which is derived from the Throwable class.
  # Catching Exceptions
-A method catches an exception using a combination of the try and catch keywords. A try/catch block is placed around the code that might generate an exception. Code within a *try/catch* block is referred to as protected code, and the syntax for using try/catch looks like the following −
- ## Syntax :                                    
+A method catches an exception using a combination of the try and catch keywords. A try/catch block is placed around the code that might generate an exception. Code within a *try/catch* block is referred to as protected code, and the syntax for using try/catch looks like the following
+## Syntax :                                    
 ```java                                            
 try {                                       
    // Protected code                        
