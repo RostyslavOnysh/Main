@@ -8,5 +8,5 @@ enum Level {
   HIGH
 }
 ```
-###You can access enum constants with the dot syntax:
+### You can access enum constants with the dot syntax:
 Level myVar = Level.MEDIUM;
