@@ -49,7 +49,8 @@ private void addUsersFromMarketingDepartmentFixed(List<? super Operator> users) 
 
 #  Producing and Consuming
 
-There might be cases where our logic needs to both read and write to the collection. In this case, the Collection will be, at the same time, both a producer and a consumer.
+There might be cases where our logic needs to both read and write to the collection. In this case, the Collection will be, 
+at the same time, both a producer and a consumer.
 The only way to handle these scenarios is to use the base class, without any of the keywords:
 ```java
 private void addUsersAndSendEmails(List<User> users) {
@@ -62,5 +63,4 @@ private void addUsersAndSendEmails(List<User> users) {
 # Conclusion
 
 In this article, we've discussed the Produce Extends Consumer Supers rule and learned how to apply it while working with Java collections.
-
 We explored various usages where collections were producers or consumers of our logic. After that, we learned that if a collection is doing both, this can signal a code smell in our design.
