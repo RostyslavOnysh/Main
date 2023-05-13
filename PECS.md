@@ -194,3 +194,74 @@ List<Object> listObject=list; //Type mismatch: cannot convert from List<String> 
 * In-variance/Non-variance: ? or ? extends Object - Unbounded Wildcard. It stands for the family of all types. Use when you both get and put.
 * Co-variance: ? extends T ( Reign of T descendants) - a wildcard with an upper bound. T is the upper-most class in the inheritance hierarchy. Use an extends wildcard when you only Get values out of a structure.
 * Contra-variance: ? super T ( Reign of T ancestor) - a wildcard with a lower bound. T is the lower-most class in the inheritance hierarchy. Use a super wildcard when you only Put values into a structure.
+
+
+When dealing with collections, a common rule for selecting between upper or lower bounded wildcards is PECS. credit
+
+PECS (Producer extends and Consumer super)
+
+mnemonic → Get (extend) and Put (Super) principle.
+
+This principle states that:
+
+Use an extends wildcard when you only get values out of a structure.
+Use a super wildcard when you only put values into a structure.
+And don’t use a wildcard when you both get and put.
+Example in Java:
+
+class Super {
+        Number testCoVariance() {
+            return null;
+        }
+        void testContraVariance(Number parameter) {
+        } 
+    }
+    
+    class Sub extends Super {
+        @Override
+        Integer testCoVariance() {
+            return null;
+        } //compiles successfully i.e. return type is don't care(Integer is subtype of Number)
+        @Override
+        void testContraVariance(Integer parameter) {
+        } //doesn't support even though Integer is subtype of Number
+    }
+The Liskov Substitution Principle (LSP) states that “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program”.
+
+Within the type system of a programming language, a typing rule
+
+covariant if it preserves the ordering of types (≤), which orders types from more specific to more generic;
+contravariant if it reverses this ordering;
+invariant or nonvariant if neither of these applies.
+Covariance and contravariance
+
+Read-only data types (sources) can be covariant;
+write-only data types (sinks) can be contravariant.
+Mutable data types which act as both sources and sinks should be invariant.
+To illustrate this general phenomenon, consider the array type. For the type Animal we can make the type Animal[]
+
+covariant: a Cat[] is an Animal[];
+contravariant: an Animal[] is a Cat[];
+invariant: an Animal[] is not a Cat[] and a Cat[] is not an Animal[].
+Java Examples:
+
+Object name= new String("prem"); //works
+List<Number> numbers = new ArrayList<Integer>();//gets compile time error
+
+Integer[] myInts = {1,2,3,4};
+Number[] myNumber = myInts;
+myNumber[0] = 3.14; //attempt of heap pollution i.e. at runtime gets java.lang.ArrayStoreException: java.lang.Double(we can fool compiler but not run-time)
+
+List<String> list=new ArrayList<>();
+list.add("prem");
+List<Object> listObject=list; //Type mismatch: cannot convert from List<String> to List<Object> at Compiletime  
+more examples
+
+enter image description here Image src
+
+bounded(i.e. heading toward somewhere) wildcard : There are 3 different flavours of wildcards:
+
+In-variance/Non-variance: ? or ? extends Object - Unbounded Wildcard. It stands for the family of all types. Use when you both get and put.
+Co-variance: ? extends T ( Reign of T descendants) - a wildcard with an upper bound. T is the upper-most class in the inheritance hierarchy. Use an extends wildcard when you only Get values out of a structure.
+Contra-variance: ? super T ( Reign of T ancestor) - a wildcard with a lower bound. T is the lower-most class in the inheritance hierarchy. Use a super wildcard when you only Put values into a structure.
+Note: wildcard ? means zero or one time, represents an unknown type. The wildcard can be used as the type of a parameter, never used as a type argument for a generic method invocation, a generic class instance creation.(i.e. when used wildcard that reference not used in elsewhere in program like we use T)
