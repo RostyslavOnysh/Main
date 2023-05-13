@@ -71,3 +71,9 @@ public <T> T addToListAndGetFirstValue(List<T> list, T value) {
     return list.get(0);
 }
 ```
+
+# The principles behind this in computer science is called
+
+* Covariance: ***? extends MyClass,***
+* Contravariance: ***? super MyClass*** and
+* Invariance/non-variance: MyClass
