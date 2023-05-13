@@ -88,9 +88,8 @@ This principle states that:
 * Use an extends wildcard when you only get values out of a structure.
 * Use a super wildcard when you only put values into a structure.
 * And don’t use a wildcard when you both get and put.
-Example in Java:
 
-```java 
+```java
 class Super {
         Number testCoVariance() {
             return null;
@@ -109,37 +108,6 @@ class Super {
         } //doesn't support even though Integer is subtype of Number
     }
 ```
-
-When dealing with collections, a common rule for selecting between upper or lower bounded wildcards is PECS. credit
-
-PECS (Producer extends and Consumer super)
-
-mnemonic → Get (extend) and Put (Super) principle.
-
-This principle states that:
-
-Use an extends wildcard when you only get values out of a structure.
-Use a super wildcard when you only put values into a structure.
-And don’t use a wildcard when you both get and put.
-Example in Java:
-
-class Super {
-        Number testCoVariance() {
-            return null;
-        }
-        void testContraVariance(Number parameter) {
-        } 
-    }
-    
-    class Sub extends Super {
-        @Override
-        Integer testCoVariance() {
-            return null;
-        } //compiles successfully i.e. return type is don't care(Integer is subtype of Number)
-        @Override
-        void testContraVariance(Integer parameter) {
-        } //doesn't support even though Integer is subtype of Number
-    }
 The Liskov Substitution Principle (LSP) states that “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program”.
 
 Within the type system of a programming language, a typing rule
@@ -155,29 +123,24 @@ Within the type system of a programming language, a typing rule
 ```java
 Object name= new String("prem"); //works
 List<Number> numbers = new ArrayList<Integer>();//gets compile time error
-
 Integer[] myInts = {1,2,3,4};
 Number[] myNumber = myInts;
 myNumber[0] = 3.14; //attempt of heap pollution i.e. at runtime gets java.lang.ArrayStoreException: java.lang.Double(we can fool compiler but not run-time)
-
 List<String> list=new ArrayList<>();
 list.add("prem");
 List<Object> listObject=list; //Type mismatch: cannot convert from List<String> to List<Object> at Compiletime  
 ```
 
 When dealing with collections, a common rule for selecting between upper or lower bounded wildcards is PECS. credit
-
-PECS (Producer extends and Consumer super)
-
+## PECS (Producer extends and Consumer super)
 mnemonic → Get (extend) and Put (Super) principle.
-
-This principle states that:
+* This principle states that:
 
 Use an extends wildcard when you only get values out of a structure.
 Use a super wildcard when you only put values into a structure.
 And don’t use a wildcard when you both get and put.
 Example in Java:
-
+```java
 class Super {
         Number testCoVariance() {
             return null;
@@ -195,6 +158,7 @@ class Super {
         void testContraVariance(Integer parameter) {
         } //doesn't support even though Integer is subtype of Number
     }
+```
 The Liskov Substitution Principle (LSP) states that “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program”.
 
 Within the type system of a programming language, a typing rule
@@ -213,7 +177,7 @@ covariant: a Cat[] is an Animal[];
 contravariant: an Animal[] is a Cat[];
 invariant: an Animal[] is not a Cat[] and a Cat[] is not an Animal[].
 Java Examples:
-
+```java
 Object name= new String("prem"); //works
 List<Number> numbers = new ArrayList<Integer>();//gets compile time error
 
@@ -224,7 +188,7 @@ myNumber[0] = 3.14; //attempt of heap pollution i.e. at runtime gets java.lang.A
 List<String> list=new ArrayList<>();
 list.add("prem");
 List<Object> listObject=list; //Type mismatch: cannot convert from List<String> to List<Object> at Compiletime  
-
+```
 ***bounded***(i.e. heading toward somewhere) wildcard : There are 3 different flavours of wildcards:
 
 * In-variance/Non-variance: ? or ? extends Object - Unbounded Wildcard. It stands for the family of all types. Use when you both get and put.
