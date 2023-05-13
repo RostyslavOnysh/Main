@@ -76,4 +76,4 @@ public <T> T addToListAndGetFirstValue(List<T> list, T value) {
 
 * Covariance: ***? extends MyClass,***
 * Contravariance: ***? super MyClass*** and
-* Invariance/non-variance: MyClass
+* Invariance/non-variance:***MyClass***
