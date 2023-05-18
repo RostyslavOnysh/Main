@@ -12,7 +12,6 @@
 
     To completely disable a check, just comment it out or delete it from the file.
 
-
  -->
 
 <module name="Checker">
