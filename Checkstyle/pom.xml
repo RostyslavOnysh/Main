@@ -4,17 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>mate-academy</groupId>
-    <artifactId>pecs</artifactId>
+    <groupId>org.example</groupId>
+    <artifactId>setQueueStackComparator</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>setQueueStackComparator</name>
+    <url>http://maven.apache.org</url>
+
 
     <properties>
         <jdk.version>11</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
-        <maven.checkstyle.plugin.configLocation>file://${project.basedir}/custom-checkstyle.xml</maven.checkstyle.plugin.configLocation>
+        <maven.checkstyle.plugin.configLocation>
+            https://raw.githubusercontent.com/mate-academy/style-guides/master/java/checkstyle.xml
+        </maven.checkstyle.plugin.configLocation>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -22,6 +30,11 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>2.17</version>
         </dependency>
     </dependencies>
     <build>
@@ -63,3 +76,4 @@
         </pluginManagement>
     </build>
 </project>
+
