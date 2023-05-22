@@ -19,7 +19,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
         <maven.checkstyle.plugin.configLocation>
-            https://raw.githubusercontent.com/mate-academy/style-guides/master/java/checkstyle.xml
+            https://raw.githubusercontent.com/RostyslavOnysh/Main/main/Checkstyle/custom-checkstyle.xml
         </maven.checkstyle.plugin.configLocation>
     </properties>
 
