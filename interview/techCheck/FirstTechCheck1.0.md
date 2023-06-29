@@ -7,5 +7,13 @@
 6. Різницю між звичайним класом, абстрактним і інтерфейсом
 7. Блок try-catch-finally всім можливі варіанти.
 8. OOP with examples
-9. 
+9. How to use parent class constructor
+10. функції класу object
+11. Instance of
+12. overloading
+13. eqauls and hashcode
+14. Enum class
+15. try catch without catch and other situation
+16. Все про класи String де зберігаются шо роблять і тд їх функції
+17. 
 В загальному ти відповідав добре на питання, але все ще є що повторити) 
