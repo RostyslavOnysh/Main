@@ -9,7 +9,7 @@ Here are some important aspects of the ResultSet interface:
 
 * ***Column Access:*** You can access columns either by their index (starting from 1) using methods like getObject(int columnIndex) or by their label/name using methods like getObject(String columnLabel). The getMetaData() method provides information about the columns in the ResultSet, such as the column names, types, and properties.
 
-* ***Data Manipulation: In addition to retrieving data, the ResultSet also supports updating data in certain cases. For example, if the underlying query is updatable and the ResultSet is not read-only, you can use methods like updateInt(int columnIndex, int value) or updateString(String columnLabel, String value) to modify the data in the current row. After making changes, you can call updateRow() to save the changes to the database.
+* ***Data Manipulation:*** In addition to retrieving data, the ResultSet also supports updating data in certain cases. For example, if the underlying query is updatable and the ResultSet is not read-only, you can use methods like updateInt(int columnIndex, int value) or updateString(String columnLabel, String value) to modify the data in the current row. After making changes, you can call updateRow() to save the changes to the database.
 
 * ***ResultSet Type and Concurrency:*** The type and concurrency of a ResultSet can be specified when creating the Statement that executes the query. ResultSet types include TYPE_FORWARD_ONLY (default), TYPE_SCROLL_INSENSITIVE, and TYPE_SCROLL_SENSITIVE, offering different capabilities for navigating the ResultSet. ResultSet concurrency can be either CONCUR_READ_ONLY (default) or CONCUR_UPDATABLE, indicating whether the ResultSet supports updates.
 
