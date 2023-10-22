@@ -38,7 +38,7 @@ Update the maximum if the currentSum is greater than the maximumSum, and repeat 
 
 
 # Here is the code to implement Sliding Window Algorithm in Java:
-'''java 
+```java  
 public class slidingwindow {
 
     static int maxSum(int[] arr,int k){
