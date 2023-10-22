@@ -7,7 +7,7 @@ Let us first understand the problem before going further with its approach. The 
 
 Suppose that the following array is given to us and we are required to find 3 consecutive numbers in this array that give us the largest sum. So, k is equal to 3 in this case.
 
-'''java 
+''' 
 arr = [16, 12, 9, 19, 11, 8]
 '''
 
