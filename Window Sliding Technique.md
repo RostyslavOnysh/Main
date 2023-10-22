@@ -27,3 +27,59 @@ The fundamental concept is to define the window using two pointers, a left point
 Until the full array or string has been evaluated, this procedure is repeated. When trying to select a subset of elements that satisfy a certain requirement, the sliding window approach comes in handy. The Sliding Window algorithm, for instance, can be used to identify the longest substring, the shortest substring, or the substring with the largest or minimum sum.
 
 Another instance is when we have to determine the highest or lowest sum of a subarray with size k fixed. The Sliding Window technique can be used in this situation to keep a window of k items and slide the window around until that we locate the subset containing the desired sum.
+
+# Full Algorithm
+Here are the steps for applying the sliding window algorithm:
+
+Add the first K components together and save the result in the currentSum variable. Because this is the first sum, it is also the current maximum; thus, save it in the variable maximumSum.
+As the window size is K, we move the window one place to the right and compute the sum of the items in the window.
+Update the maximum if the currentSum is greater than the maximumSum, and repeat step 2.
+
+
+
+# Here is the code to implement Sliding Window Algorithm in Java:
+''' java 
+public class slidingwindow {
+
+    static int maxSum(int[] arr,int k){
+        //length of the array
+        int n=arr.length;
+
+        //length of array(n) must be greater than window size(k)
+        if(n<k){
+            System.out.println("Invalid");
+            return -1;
+        }
+
+        //sum of first k(window size) elements
+        int window_sum=0;
+        for(int i=0;i<k;i++) window_sum+=arr[i];
+
+        int max_sum=window_sum;
+
+        //Calculating sums of remaining windows by
+        //removing first element of previous window
+        //and adding last element of current window
+        //this way our window moves forward.
+
+        //Also updating the maximum sum to current window sum
+        // if the current window sum is greater
+        // than existing maximum sum.
+        for(int i=k;i<n;i++){
+            window_sum+=(arr[i]-arr[i-k]);
+            max_sum=Math.max(window_sum,max_sum);
+        }
+
+        return max_sum;
+    }
+
+    public static void main(String[] args) {
+        //window size
+        int k=3;
+        int[] arr={16, 12, 9, 19, 11, 8};
+        System.out.println(maxSum(arr,k));
+    }
+
+
+}
+'''
