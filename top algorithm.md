@@ -151,3 +151,71 @@
 35. **Генерація всіх можливих комбінацій (combinations/permutations)**
     - Пояснення: Генерація усіх можливих комбінацій або перестановок елементів.
     - Time Complexity: O(n!), де n - кількість елементів.
+    - 
+
+
+# We have a problem from LeetCode, such as :
+***Jump Game II***
+You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0].
+
+Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at nums[i], you can jump to any nums[i + j] where:
+```bash
+0 <= j <= nums[i] and
+i + j < n
+```
+Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1].
+
+ 
+
+## Example 1:
+```bash
+Input: nums = [2,3,1,1,4]
+Output: 2
+```
+Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index.
+## Example 2:
+```bash
+Input: nums = [2,3,0,1,4]
+Output: 2
+```
+
+Now, we aim to determine which algorithm would be the most effective in solving this problem, with a focus on achieving optimal time complexity
+1. Simplify the code
+2. Evaluate time complexity and memory usage
+
+Okay,than we can use here two variants of the algorithm, the first one is ***Dynamic Programming*** and the second is ***Greedy Algorithm***
+1. ***Dynamic Programming***
+* We will create a DP array of n+1 where n is the number of elements.
+* Set all the indexes of the array to the maximum value.
+* Initialize the first index of the array as '0'.
+* Iterate the array with the help of loops, keep the total count to reach the last index, and find the minimum jumps.
+* Print the total number of jumps.
+## ***Complexity Analysis***
+* ***Time Complexity:*** The time complexity to solve this approach is O(n^2). Due to the nested traversal of the array. 
+* ***Space Complexity:*** The space complexity will be O(n). To store the DP, linear space is needed.
+
+  
+2. ***Greedy Algorithm***
+
+   ```java
+   public class Solution {
+    public static void main(String[] args) {
+        int[] arr = new int[]{1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
+        System.out.println(jump(arr));
+    }
+
+    public static int jump(int[] nums) {
+        int max = 0;
+        int steps = 0;
+        int jumps = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            max = Math.max(max, i + nums[i]);
+            if (i == steps) {
+                jumps++;
+                steps = max;
+            }
+        }
+        return jumps;
+    }
+}```
+
