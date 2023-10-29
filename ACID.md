@@ -9,4 +9,4 @@
 
 ACID transactions ensure the highest possible data reliability and integrity. They ensure that your data never falls into an inconsistent state because of an operation that only partially completes. For example, without ACID transactions, if you were writing some data to a database table, but the power went out unexpectedly, it's possible that only some of your data would have been saved, while some of it would not. Now your database is in an inconsistent state that is very difficult and time-consuming to recover from.
 
-https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191121102921/ACID-Properties.jpg![Uploading image.png…]()
+![ACID-Properties](https://github.com/RostyslavOnysh/Main/assets/98691406/6d57e550-2899-44cc-a64f-8e1e9328e8b4)
