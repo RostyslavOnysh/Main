@@ -151,8 +151,6 @@
 35. **Генерація всіх можливих комбінацій (combinations/permutations)**
     - Пояснення: Генерація усіх можливих комбінацій або перестановок елементів.
     - Time Complexity: O(n!), де n - кількість елементів.
-    - 
-
 
 # We have a problem from LeetCode, such as :
 ***Jump Game II***
