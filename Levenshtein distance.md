@@ -10,9 +10,9 @@ Levenshtein distance may also be referred to as edit distance, although that ter
 Edit distance matrix for two words using cost of substitution as 1 and cost of deletion or insertion as 0.5
 For example, the Levenshtein distance between "kitten" and "sitting" is 3, since the following 3 edits change one into the other, and there is no way to do it with fewer than 3 edits:
 
-kitten → sitten (substitution of "s" for "k"),
-sitten → sittin (substitution of "i" for "e"),
-sittin → sitting (insertion of "g" at the end).
+* kitten → sitten (substitution of "s" for "k"),
+* sitten → sittin (substitution of "i" for "e"),
+* sittin → sitting (insertion of "g" at the end).
 
 
 ***Алгоритм "Levenshtein distance" (відстань Левенштейна) є метрикою***, яка вимірює різницю між двома рядками. Він визначає мінімальну кількість операцій (вставка, видалення, заміна символів), необхідних для перетворення одного рядка на інший.
@@ -25,11 +25,11 @@ sittin → sitting (insertion of "g" at the end).
 
 Алгоритм рекурсивно обчислює відстань Левенштейна шляхом порівняння символів на кожній позиції двох рядків. За допомогою динамічного програмування відстань розраховується поетапно для всіх підрядкових підланок рядків, а потім використовується для обчислення відстані для більшого підланцюжка.
 
-Основна ідея алгоритму полягає в тому, щоб знайти найменшу кількість операцій, які потрібні для перетворення одного рядка на інший. Це дозволяє виміряти подібність між рядками.
+# Основна ідея алгоритму полягає в тому, щоб знайти найменшу кількість операцій, які потрібні для перетворення одного рядка на інший. Це дозволяє виміряти подібність між рядками.
 
 Наприклад, для рядків "kitten" і "sitting" відстань Левенштейна дорівнює 3. Ми можемо досягти цього шляхом видалення "k", заміни "e" на "i" і вставки "g" в кінець. Отже, ці два рядки не є ідентичними, але вони мають відносно невелику відстань Левенштейна, що свідчить про їх подібність.
 
-Алгоритм "Levenshtein distance" може бути використаний для порівняння двох слів, зокрема для визначення найближчого слова зі словника до заданого терміна.
+Алгоритм ***"Levenshtein distance"*** може бути використаний для порівняння двох слів, зокрема для визначення найближчого слова зі словника до заданого терміна.
 
 
 ```java 
