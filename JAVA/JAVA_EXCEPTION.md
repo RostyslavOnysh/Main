@@ -15,6 +15,7 @@ For example, if you use FileReader class in your program to read data from a fil
 an ArrayIndexOutOfBoundsExceptionexception occurs.
 
  *Example :* 
+ 
  ```java
 public class Unchecked_Demo {
    
@@ -24,6 +25,7 @@ public class Unchecked_Demo {
    }
 }
 ```
+
 If you compile and execute the above program, you will get the following exception.
 
 *Output :* 
