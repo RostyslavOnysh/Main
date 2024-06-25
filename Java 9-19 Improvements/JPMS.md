@@ -3,13 +3,13 @@
 
 ## Here are some key features and benefits of using JPMS:
 
-* Modularity: JPMS enables you to split your application into modules, allowing you to organize your codebase more effectively. Modules have explicit dependencies on other modules, which helps in managing the complexity of large applications.
+* ***Modularity***: JPMS enables you to split your application into modules, allowing you to organize your codebase more effectively. Modules have explicit dependencies on other modules, which helps in managing the complexity of large applications.
 
-* Encapsulation: Modules enforce encapsulation by allowing you to specify which packages are accessible to other modules. This provides better control over the visibility of code, reducing the risk of accidental dependencies.
+* ***Encapsulation***: Modules enforce encapsulation by allowing you to specify which packages are accessible to other modules. This provides better control over the visibility of code, reducing the risk of accidental dependencies.
 
-* Dependency Management: JPMS helps to address dependency issues by explicitly declaring dependencies between modules. This allows the Java runtime to verify and resolve dependencies at compile time and runtime, reducing the chances of runtime errors due to missing or conflicting dependencies.
+* ***Dependency Management***: JPMS helps to address dependency issues by explicitly declaring dependencies between modules. This allows the Java runtime to verify and resolve dependencies at compile time and runtime, reducing the chances of runtime errors due to missing or conflicting dependencies.
 
-* Strong Encapsulation: JPMS introduces a concept called "strong encapsulation," which enforces stricter access controls. This prevents other modules from directly accessing internal implementation details, promoting better separation of concerns and reducing the impact of changes to internal implementation.
+* ***Strong Encapsulation***: JPMS introduces a concept called "strong encapsulation," which enforces stricter access controls. This prevents other modules from directly accessing internal implementation details, promoting better separation of concerns and reducing the impact of changes to internal implementation.
 
 Now, let's consider some scenarios where you might want to use ***JPMS***:
 
